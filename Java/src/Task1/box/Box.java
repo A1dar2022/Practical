@@ -37,7 +37,7 @@ public class Box implements BoxOperations {
         }
     }
 
-    //метод для удаления по минимальной цена, но при этом основным показателем условия является вес
+    //метод для удаления по минимальной цена,  но при этом основным показателем условия является вес
     public void deleteMinPrice(int requiredWeight, int requiredPrice) {
         Sweetness minPriceSweetness = null;
 

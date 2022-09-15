@@ -12,9 +12,9 @@ public class Main {
         /*не стал использовать скане и прочий ввод для экономии времени...
         очень мало сна  =)
          */
-        
-        box.deleteMinWeight(670);  //При проверке только по весу
-        // box.deleteMinPrice(500, 600);  //При проверке  по цене и весу
+
+        box.deleteMinWeight(670);  //При проверки только по весу
+        // box.deleteMinPrice(500, 600);  //При проверки  по цене и весу
 
         box.getInfoSweetness();
         box.printPriceBox();
