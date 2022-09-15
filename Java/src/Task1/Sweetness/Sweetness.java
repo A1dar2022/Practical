@@ -1,4 +1,4 @@
-package Task1;
+package Task1.Sweetness;
 
 public abstract class Sweetness {
  private String nameOfSweets;
@@ -38,6 +38,9 @@ public abstract class Sweetness {
         this.uniqueParameter = uniqueParameter;
     }
 
+    public Sweetness() {
+    }
+
     public Sweetness(String nameOfSweets, int weight, int price, String uniqueParameter) {
         this.nameOfSweets = nameOfSweets;
         this.weight = weight;
@@ -45,14 +48,12 @@ public abstract class Sweetness {
         this.uniqueParameter = uniqueParameter;
     }
 
-    private  String getInfo(){
-        return "Сладость - " + nameOfSweets + ", уникальный параметр - " +
+    public  void getInfo(){
+        System.out.println("Сладость - " + nameOfSweets + ", уникальный параметр - " +
                  uniqueParameter + ", цена = " + price + " рублей, " +
-                "вес = " + weight + "грамм";
+                "вес = " + weight + " грамм");
     }
-    
-    public String toString(){
-        return getInfo();
-    }
+
+
 
 }
