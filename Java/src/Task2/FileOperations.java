@@ -42,4 +42,68 @@ public class FileOperations {
 
         return text.toString();
     }
+
+    /*
+    Приобразования текста в массив
+     */
+
+    public static String[] wordSplit(String text) {
+
+        text = text.replaceAll("[^a-zA-Zа-яА-Я]", " ").replaceAll("\\s+", " ");
+
+        return text.split(" ");
+    }
+
+
+    /*
+    Метод для подсчета количесва слов и вывода повторяемости
+     */
+
+    public static void wordCounter(String[] textFile) {
+        Map<String, Integer> map = new HashMap<>();
+        int max = 0;
+        int count;
+        List<String> list = new ArrayList<>();
+
+        for (int i = 0; i < textFile.length; i++) {
+            count = 1;
+            if (map.containsKey(textFile[i])) {
+                count = map.get(textFile[i]) + 1;
+            }
+            map.put(textFile[i], count);
+            if (count > max) {
+                max = count;
+                list.clear();
+                list.add(textFile[i]);
+
+            } else if (count == max) {
+                list.add(textFile[i]);
+            }
+        }
+
+        System.out.println("Все слова и количество повторений:");
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+
+        System.out.println();
+
+        System.out.println("Самые частые слова:");
+        for (String s : list) {
+            System.out.println(s + " повторений = " + max);
+        }
+
+
+    }
+
+    //Вывод в отсортированном порядке
+    public static void printSortWord(String[] text) {
+        Arrays.sort(text);
+        System.out.println("Список всех слов:");
+        for (String s : text) {
+            System.out.println(s);
+        }
+    }
+
+
 }

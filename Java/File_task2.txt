@@ -1,4 +1,4 @@
 Home add	Delete, 
 word main DIGITAL
 qwer
-float
+float, qwer .Dad
