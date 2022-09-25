@@ -1,29 +1,25 @@
-package aidar.sad;
+package show;
 
 import java.util.List;
 
-import static aidar.sad.Operations.*;
-
 public class Main {
-
-
 
     public static void main(String[] args) {
         String fileName = "src/main/resources/Shares.json";
 
-        Companyes obj = parseJson(fileName);
-        List<InfoCompany> companies;
+        Companyes obj = Operations.parseJson(fileName);
+        List<InfoCompany> companyes;
 
         if (obj != null){
-            companies = obj.getInfoCompany();
+            companyes = obj.getInfoCompany();
 
-            task1(companies);
+            Operations.levelOne(companyes);
 
-            task2(companies);
+            Operations.levelTwo(companyes);
 
-            task3(companies);
+            Operations.LevelThree(companyes);
 
-            task4(companies);
+            Operations.levelFour(companyes);
         }
     }
 
